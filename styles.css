@@ -82,3 +82,7 @@ input::placeholder {
   display: flex;
   justify-content: space-between;
 }
+
+.warnings {
+  color: yellow;
+}
