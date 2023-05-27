@@ -1,3 +1,5 @@
+const inputAll = document.querySelectorAll('input');
+const spanAll = document.querySelectorAll('span');
 
 // Кнопки расчета и сброса полей
 const button = document.querySelector('#sum');
@@ -44,12 +46,6 @@ button.addEventListener('click', function () {
 
 // Корявая функция сброса полей
 reset.addEventListener('click', function () {
-  allPrice.textContent = '';
-  const inputAll = document.querySelectorAll('input');
   inputAll.forEach((item) => item.value = '');
+  spanAll.forEach((item) => item.textContent = '');
 })
-
-  // console.log(monthlyPayment(32114,32393,32393));1975.32
-// Для тестов
-// газ - 32114,32393,7.08;1975.32
-// вода - 615,636,35.12;
