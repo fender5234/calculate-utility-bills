@@ -12,11 +12,12 @@ const allPrice = document.querySelector('.all-price');
 const gasPrice = document.querySelector('.gas-price');
 const electPrice = document.querySelector('.elect-price');
 const watterPrice = document.querySelector('.watter-price');
+const seweragePrice = document.querySelector('.sewerage-price');
 
 // Функция расчета стоимости услуги
 const monthlyPayment = function (lastMonth, currentMonth, Price) {
   const totalСost = (currentMonth - lastMonth) * Price;
-  return totalСost;
+  return Math.round(totalСost);
 };
 
 // Обертка и поля ввода для стоимости газа
@@ -31,17 +32,23 @@ const electInputs = electWrapper.querySelectorAll('input');
 const watterWrapper = document.querySelector('.watter-wrapper');
 const watterInputs = watterWrapper.querySelectorAll('input');
 
+// Обертка и поля ввода для стоимости водоснабжения
+const sewerageWrapper = document.querySelector('.sewerage-wrapper');
+const sewerageInputs = sewerageWrapper.querySelectorAll('input');
+
 // функция расчета по клику на кнопку
 button.addEventListener('click', function () {
   const gas = monthlyPayment(gasInputs[0].value, gasInputs[1].value, gasInputs[2].value);
   const elect = monthlyPayment(electInputs[0].value, electInputs[1].value, electInputs[2].value);
   const watter = monthlyPayment(watterInputs[0].value, watterInputs[1].value, watterInputs[2].value);
+  const sewerage = monthlyPayment(sewerageInputs[0].value, sewerageInputs[1].value, sewerageInputs[2].value);
 
   gasPrice.textContent = `${gas} ₽`;
   watterPrice.textContent = `${watter} ₽`;
   electPrice.textContent = `${elect} ₽`;
+  seweragePrice.textContent = `${sewerage} ₽`;
 
-  allPrice.textContent = `${gas + watter + elect} ₽`;
+  allPrice.textContent = `${gas + watter + elect + sewerage} ₽`;
 })
 
 // Корявая функция сброса полей
