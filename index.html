@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <h1 class="wrapper-title">Комуналка</h1>
-      <div class="gas-wrapper service-wrapper">
-        <h2 class="title">Газ</h2>
-        <input type="number" placeholder="Старые показания" id="gasLastMonth" />
-        <input type="number" placeholder="Новые показания" id="gasCurrentMonth" />
-        <input type="number" placeholder="Актуальная стоимость" id="gasActualPrice" />
-        <p>За газ в этом месяце - <span class="gas-price"></span></p>
-      </div>
-      <div class="elect-wrapper service-wrapper">
-        <h2 class="title">Свет</h2>
-        <input type="number" placeholder="Старые показания" id="electLastMonth" />
-        <input type="number" placeholder="Новые показания" id="electCurrentMonth" />
-        <input type="number" placeholder="Актуальная стоимость" id="electActualPrice" />
-        <p>За свет в этом месяце - <span class="elect-price"></span></p>
-      </div>
-      <div class="watter-wrapper service-wrapper">
-        <h2 class="title">Вода</h2>
-        <input type="number" placeholder="Старые показания" id="watterLastMonth" />
-        <input type="number" placeholder="Новые показания" id="watterCurrentMonth" />
-        <input type="number" placeholder="Актуальная стоимость" id="watterActualPrice" />
-        <p>За Воду в этом месяце - <span class="watter-price"></span></p>
-      </div>
-      <div class="sewerage-wrapper service-wrapper">
-        <h2 class="title">Канализация</h2>
-        <input type="number" placeholder="Старые показания" id="sewerageLastMonth" />
-        <input type="number" placeholder="Новые показания" id="sewerageCurrentMonth" />
-        <input type="number" placeholder="Актуальная стоимость" id="sewerageActualPrice" />
-        <p>За Канализацию в этом месяце - <span class="sewerage-price"></span></p>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1 class="wrapper-title">Калькулятор комунальных платежей</h1>
+    <div class="gas-wrapper service-wrapper">
+      <h2 class="title">Газ</h2>
+      <input type="number" placeholder="Старые показания" id="gasLastMonth" />
+      <input type="number" placeholder="Новые показания" id="gasCurrentMonth" />
+      <input type="number" placeholder="Актуальная стоимость" id="gasActualPrice" />
+      <p>За газ в этом месяце - <span class="gas-price"></span></p>
+    </div>
+    <div class="elect-wrapper service-wrapper">
+      <h2 class="title">Свет</h2>
+      <input type="number" placeholder="Старые показания" id="electLastMonth" />
+      <input type="number" placeholder="Новые показания" id="electCurrentMonth" />
+      <input type="number" placeholder="Актуальная стоимость" id="electActualPrice" />
+      <p>За свет в этом месяце - <span class="elect-price"></span></p>
+    </div>
+    <div class="watter-wrapper service-wrapper">
+      <h2 class="title">Вода</h2>
+      <input type="number" placeholder="Старые показания" id="watterLastMonth" />
+      <input type="number" placeholder="Новые показания" id="watterCurrentMonth" />
+      <input type="number" placeholder="Актуальная стоимость" id="watterActualPrice" />
+      <p>За Воду в этом месяце - <span class="watter-price"></span></p>
+    </div>
+    <div class="sewerage-wrapper service-wrapper">
+      <h2 class="title">Водотведение</h2>
+      <input type="number" placeholder="Старые показания" id="sewerageLastMonth" />
+      <input type="number" placeholder="Новые показания" id="sewerageCurrentMonth" />
+      <input type="number" placeholder="Актуальная стоимость" id="sewerageActualPrice" />
+      <p>За Водотведение в этом месяце - <span class="sewerage-price"></span></p>
+    </div>
+    <div class="footer">
       <div class="button-wrapper">
         <button type="button" id="sum" class="button">Расчитать!</button>
-        <button type="button" id="reset" class="button">Сбросить!</button>
+        <button type="button" id="reset" class="button button--reset">Сбросить!</button>
       </div>
       <p>Общая стоимость за месяц составляет - <br> <span class="all-price"></span></p>
-      <p class="warnings">Важно! при оплате, принимающая сторона может взымать коммисию.<br />В результате будет общая сумма + коммисия.</p>
+      <p class="warnings">Важно! при оплате, принимающая сторона может взымать коммисию.<br />В результате будет общая
+        сумма + коммисия.</p>
+
+      <p>Если калькулятор считает не правильно, или не считает, или дизайн не красивый, или еще что нибудь:D по любым вопросам пишите в телегу <a href="https://t.me/fender5234">сюда!</a></p>
     </div>
-    <script src="./index.js"></script>
-  </body>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
 </html>
