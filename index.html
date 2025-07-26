@@ -1,61 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Калькулятор комунальных платежей</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css" />
-  <title>Document</title>
-</head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Калькулятор платежей за коммуналку</h1>
+      <p class="header__text">
+        Заполните нужные поля, и в конце нажмите кнопку "рассчитать". В
+        результате будет в каждом поле появиться информация о стоимости за
+        каждую услугу, и в конце списка можно будет увидеть итоговую сумму за
+        все услуги.
+      </p>
+    </header>
+    <main class="main">
+      <div class="wrapper">
+        <div class="gas-wrapper service-wrapper">
+          <div class="wrapper-title">
+            <img
+              src="./images/free-icon-gas-meter-16355698.png"
+              width="50"
+              height="50"
+              alt="Иконка счетчик газа"
+            />
+            <h2 class="title">Показания счетчика газа</h2>
+          </div>
+          <label class="label-input" for="gasLastMonth">Старые показания</label>
+          <input
+            type="number"
+            placeholder="Введите показания счетчика"
+            id="gasLastMonth"
+          />
+          <label class="label-input" for="gasCurrentMonth"
+            >Новые показания</label
+          >
+          <input
+            type="number"
+            placeholder="Введите показания счетчика"
+            id="gasCurrentMonth"
+          />
+          <label class="label-input" for="gasActualPrice"
+            >Актуальная стоимость</label
+          >
+          <input
+            type="number"
+            placeholder="Введите стоимость услуги"
+            id="gasActualPrice"
+          />
+          <p>За газ в этом месяце - <span class="gas-price"></span></p>
+        </div>
+        <div class="elect-wrapper service-wrapper">
+          <div class="wrapper-title">
+            <img
+              src="./images/electricity_15301888.png"
+              width="50"
+              height="50"
+              alt="Иконка счетчик электричества"
+            />
+            <h2 class="title">Показания счетчика электричества</h2>
+          </div>
+          <label class="label-input" for="gasCurrentMonth"
+            >Старые показания</label
+          >
+          <input
+            type="number"
+            placeholder="Введите показания счетчика"
+            id="electLastMonth"
+          />
+          <label class="label-input" for="gasCurrentMonth"
+            >Новые показания</label
+          >
+          <input
+            type="number"
+            placeholder="Введите показания счетчика"
+            id="electCurrentMonth"
+          />
+          <label class="label-input" for="gasCurrentMonth"
+            >Актуальная стоимость</label
+          >
+          <input
+            type="number"
+            placeholder="Введите стоимость услуги"
+            id="electActualPrice"
+          />
+          <p>За свет в этом месяце - <span class="elect-price"></span></p>
+        </div>
+        <div class="watter-wrapper service-wrapper">
+          <div class="wrapper-title">
+            <img
+              src="./images/water-meter.png"
+              width="50"
+              height="50"
+              alt="Иконка счетчик воды"
+            />
+            <h2 class="title">Показания счетчика воды</h2>
+          </div>
+          <label class="label-input" for="gasCurrentMonth"
+            >Старые показания</label
+          >
+          <input
+            type="number"
+            placeholder="Введите показания счетчика"
+            id="watterLastMonth"
+          />
+          <label class="label-input" for="gasCurrentMonth"
+            >Новые показания</label
+          >
+          <input
+            type="number"
+            placeholder="Введите показания счетчика"
+            id="watterCurrentMonth"
+          />
+          <label class="label-input" for="gasCurrentMonth"
+            >Актуальная стоимость</label
+          >
+          <input
+            type="number"
+            placeholder="Введите стоимость услуги"
+            id="watterActualPrice"
+          />
+          <p>За Воду в этом месяце - <span class="watter-price"></span></p>
+        </div>
+        <div class="sewerage-wrapper service-wrapper">
+          <div class="wrapper-title">
+            <img
+              src="./images/icons8-water-pipe-64.png"
+              width="50"
+              height="50"
+              alt="Иконка трубы"
+            />
+            <h2 class="title">Показания за водоотведение <br> (обычно считают по счетчику воды)</h2>
+          </div>
+          <label class="label-input" for="gasCurrentMonth"
+            >Старые показания</label
+          >
+          <input
+            type="number"
+            placeholder="Введите показания счетчика"
+            id="sewerageLastMonth"
+          />
+          <label class="label-input" for="gasCurrentMonth"
+            >Новые показания</label
+          >
+          <input
+            type="number"
+            placeholder="Введите показания счетчика"
+            id="sewerageCurrentMonth"
+          />
+          <label class="label-input" for="gasCurrentMonth"
+            >Актуальная стоимость</label
+          >
+          <input
+            type="number"
+            placeholder="Введите стоимость услуги"
+            id="sewerageActualPrice"
+          />
+          <p>
+            За Водотведение в этом месяце - <span class="sewerage-price"></span>
+          </p>
+        </div>
+      </div>
+    </main>
 
-<body>
-  <div class="wrapper">
-    <h1 class="wrapper-title">Калькулятор комунальных платежей</h1>
-    <div class="gas-wrapper service-wrapper">
-      <h2 class="title">Газ</h2>
-      <input type="number" placeholder="Старые показания" id="gasLastMonth" />
-      <input type="number" placeholder="Новые показания" id="gasCurrentMonth" />
-      <input type="number" placeholder="Актуальная стоимость" id="gasActualPrice" />
-      <p>За газ в этом месяце - <span class="gas-price"></span></p>
-    </div>
-    <div class="elect-wrapper service-wrapper">
-      <h2 class="title">Свет</h2>
-      <input type="number" placeholder="Старые показания" id="electLastMonth" />
-      <input type="number" placeholder="Новые показания" id="electCurrentMonth" />
-      <input type="number" placeholder="Актуальная стоимость" id="electActualPrice" />
-      <p>За свет в этом месяце - <span class="elect-price"></span></p>
-    </div>
-    <div class="watter-wrapper service-wrapper">
-      <h2 class="title">Вода</h2>
-      <input type="number" placeholder="Старые показания" id="watterLastMonth" />
-      <input type="number" placeholder="Новые показания" id="watterCurrentMonth" />
-      <input type="number" placeholder="Актуальная стоимость" id="watterActualPrice" />
-      <p>За Воду в этом месяце - <span class="watter-price"></span></p>
-    </div>
-    <div class="sewerage-wrapper service-wrapper">
-      <h2 class="title">Водотведение</h2>
-      <input type="number" placeholder="Старые показания" id="sewerageLastMonth" />
-      <input type="number" placeholder="Новые показания" id="sewerageCurrentMonth" />
-      <input type="number" placeholder="Актуальная стоимость" id="sewerageActualPrice" />
-      <p>За Водотведение в этом месяце - <span class="sewerage-price"></span></p>
-    </div>
-    <div class="footer">
+    <footer class="footer">
       <div class="button-wrapper">
         <button type="button" id="sum" class="button">Расчитать!</button>
-        <button type="button" id="reset" class="button button--reset">Сбросить!</button>
+        <button type="button" id="reset" class="button button--reset">
+          Сбросить!
+        </button>
       </div>
-      <p>Общая стоимость за месяц составляет - <br> <span class="all-price"></span></p>
-      <p class="warnings">Важно! при оплате, принимающая сторона может взымать коммисию.<br />В результате будет общая
-        сумма + коммисия.</p>
-
-      <p>Если калькулятор считает не правильно, или не считает, или дизайн не красивый, или еще что нибудь:D по любым вопросам пишите в телегу <a href="https://t.me/fender5234">сюда!</a></p>
-    </div>
-  </div>
-  <script src="./index.js"></script>
-</body>
-
+      <p>
+        Общая стоимость за месяц составляет - <br />
+        <span class="all-price"></span>
+      </p>
+      <p class="warnings">
+        Важно! при оплате, принимающая сторона может взымать коммисию.<br />В
+        результате будет общая сумма + коммисия.
+      </p>
+      <p>
+        Если калькулятор считает не правильно, или не считает, или дизайн не
+        красивый, или еще что нибудь:D по любым вопросам пишите в телегу
+        <a href="https://t.me/fender5234">сюда!</a>
+      </p>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
 </html>
